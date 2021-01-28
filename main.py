@@ -2,7 +2,13 @@
 # Type “python jaegeun_oh_hw1.py”
 # Enter a positive number only if not it will print out “Number is below 0.”
 
-year = int(input("Input-"))
+while True:
+  try:
+    year = int(input("Input-"))
+  except ValueError:
+    print("Please enter a valid integer")
+    continue
+  break
 
 if year > 0:
   if year % 400 == 0:
